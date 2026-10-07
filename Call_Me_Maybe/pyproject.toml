@@ -1,0 +1,29 @@
+[project]
+name = "callme_maybe"
+version = "0.1.0"
+description = "Function calling in LLMs using constrained decoding"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pydantic",
+    "torch",
+    "transformers",
+    "huggingface-hub",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "llm_sdk.*"
+ignore_errors = true

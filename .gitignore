@@ -1,0 +1,8 @@
+*.o
+*.a
+*.out
+*.gch
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
